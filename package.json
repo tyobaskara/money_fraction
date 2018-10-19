@@ -2,7 +2,7 @@
   "name": "money_fraction",
   "version": "1.0.0",
   "description": "-- semantic-ui -- semantic-ui-react -- webpack 4 -- react js -- redux -- express",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "10.8.0",
     "npm": "6.4.1"
