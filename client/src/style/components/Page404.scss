@@ -1,6 +1,6 @@
 .page-404 {
     align-items: center;
-    background-color: salmon;
+    background-color: limegreen;
     -webkit-animation: background 4s infinite; /* Safari 4.0 - 8.0 */
     animation: background 4s infinite;
     color: white;
@@ -12,7 +12,7 @@
     top: 0;
     bottom: 0;
     &__content {
-        background: tomato;
+        background: lightseagreen;
         border-radius: 50%;
         height: 200px;
         width: 200px;
@@ -28,7 +28,7 @@
             margin-bottom: 15px;
         }
         a {
-            color: burlywood;
+            color: greenyellow;
             display: block;
             font-size: 1.6rem;
             font-weight: 600;
@@ -40,7 +40,7 @@
 }
 
 @keyframes background {
-    0%   {background-color: salmon}
-    50%  {background-color: tomato}
-    100% {background-color: salmon}
+    0%   {background-color: limegreen}
+    50%  {background-color: lightseagreen}
+    100% {background-color: limegreen}
 }
