@@ -6,5 +6,11 @@ html, body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+button:focus {
+  outline: 0;
+  border: 0;
+}
+
 @import './components/Header';
 @import './components/Page404';
+@import './components/FractionForm';
