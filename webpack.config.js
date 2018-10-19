@@ -19,8 +19,6 @@ module.exports = {
     },
     devtool: "source-map",
     devServer: {
-      watchContentBase: true,
-      publicPath: "/",
       historyApiFallback: true,
       proxy: {
         '/api/*': {
