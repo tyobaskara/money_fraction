@@ -7,15 +7,15 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
+  template: "./client/src/index.html",
   filename: "./index.html"
 });
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./client/src/index.js",
     output: {
-      path: path.resolve('dist'),
-      filename: 'bundled.js',
+      path: path.resolve(__dirname, 'client/dist'),
+      filename: '[name].bundle.js',
       publicPath: '/'
     },
     devtool: "source-map",

@@ -10,9 +10,9 @@
   "scripts": {
     "start": "node ./server/server.js",
     "server": "nodemon ./server/server.js",
-    "client": "npm run dev --prefix client",
+    "client": "webpack-dev-server --mode development --open --hot",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ./client && npm run build --prefix ./client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && webpack --mode production"
   },
   "author": "tyobaskara",
   "license": "MIT",
