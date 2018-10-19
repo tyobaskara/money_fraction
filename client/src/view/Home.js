@@ -7,10 +7,19 @@ import { setHeaderTitle } from '../actions/headerActions';
 
 // component
 import FractionForm from '../components/FractionForm';
+import FractionResult from '../components/FractionResult';
+
+// validation
+import { validateFormat } from '../validation';
+
+// util
+import { getNumber, getFraction, getCountFraction } from '../util';
 
 class Home extends React.Component {
     state = {
-        input: ''
+        input: '',
+        fractions: [],
+        isValid: true
     }
 
     componentWillMount() {
@@ -18,17 +27,26 @@ class Home extends React.Component {
     }
 
     onChange = (e) => {
-        this.setState({ input: e.target.value })
+        this.setState({ input: e.target.value, isValid: true })
     }
 
     onSubmit = (e) => {
         e.preventDefault();
+        const { input } = this.state;
 
-        console.log(this.state.input);
+        if(input !== '' && validateFormat(input)) {
+            const fractionArray = getFraction(getNumber(input));
+            const countFraction = getCountFraction(fractionArray);
+
+            this.setState({ fractions: countFraction, isValid: true });
+        }
+        else {
+            this.setState({ fractions: [], isValid: false });
+        }
     }
 
     render() {
-        const { input } = this.state;
+        const { input, fractions, isValid } = this.state;
 
         return (
             <React.Fragment>
@@ -37,8 +55,10 @@ class Home extends React.Component {
                 </Helmet>
                 
                 <div className="has-header-fixed">
-                    <FractionForm value={input} onSubmit={this.onSubmit} onChange={this.onChange} />
+                    <FractionForm value={input} onSubmit={this.onSubmit} onChange={this.onChange} isValid={isValid} />
 
+                    <FractionResult fractions={fractions}/>
+                    
                     {/*<img src={require('../../static/images/no_pic.png')} alt="no pic"/>*/}
                 </div>
             </React.Fragment>
