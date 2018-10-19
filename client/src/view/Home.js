@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from "react-router";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
@@ -38,4 +39,6 @@ Home.propTypes = {
 };
 
 // export default withRouter(Home);
-export default connect(null, { getHeaderTitle })(Home);
+export default withRouter(
+    connect(null, { getHeaderTitle })(Home)
+);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from "react-router";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeHeaderTitle } from '../actions/headerActions';
@@ -25,4 +26,6 @@ Page404.propTypes = {
   removeHeaderTitle: PropTypes.func.isRequired
 }
 
-export default connect(null, { removeHeaderTitle })(Page404);
+export default withRouter(
+  connect(null, { removeHeaderTitle })(Page404)
+);
