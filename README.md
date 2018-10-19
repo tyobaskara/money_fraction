@@ -2,15 +2,17 @@
 -- semantic-ui
 -- semantic-ui-react
 -- webpack 4
--- react js
+-- reactjs
 -- redux
 -- express
 
 # First Step
+-- cd to /money_fraction
 -- npm install
 
 # Run Step
+-- cd to /money_fraction
 -- npm run dev
 
 # Live
--- https://baskara-boilerplate-react.herokuapp.com/
+-- https://money-fraction.herokuapp.com/
