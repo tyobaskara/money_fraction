@@ -1,4 +1,4 @@
-# technology
+# Technology
 -- semantic-ui
 -- semantic-ui-react
 -- webpack 4
