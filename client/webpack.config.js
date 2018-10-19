@@ -23,7 +23,7 @@ module.exports = {
       historyApiFallback: true,
       proxy: {
         '/api/*': {
-            target: 'http://localhost:5000',
+            target: devMode ? 'http://localhost:5000' : 'http://localhost:' + process.env.PORT,
             secure: false
         }
       },
