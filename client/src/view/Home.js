@@ -10,7 +10,7 @@ import FractionForm from '../components/FractionForm';
 import FractionResult from '../components/FractionResult';
 
 // validation
-import { validateFormat } from '../validation';
+import { currencyFormat } from '../validation';
 
 // util
 import { getNumber, getFraction, getCountFraction } from '../util';
@@ -34,7 +34,7 @@ class Home extends React.Component {
         e.preventDefault();
         const { input } = this.state;
 
-        if(input !== '' && validateFormat(input)) {
+        if(input !== '' && currencyFormat(input)) {
             const fractionArray = getFraction(getNumber(input));
             const countFraction = getCountFraction(fractionArray);
 
