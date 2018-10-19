@@ -1,0 +1,46 @@
+.page-404 {
+    align-items: center;
+    background-color: salmon;
+    -webkit-animation: background 4s infinite; /* Safari 4.0 - 8.0 */
+    animation: background 4s infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    &__content {
+        background: tomato;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+            display: block;
+            font-size: 3.2rem;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        a {
+            color: burlywood;
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1;
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
+}
+
+@keyframes background {
+    0%   {background-color: salmon}
+    50%  {background-color: tomato}
+    100% {background-color: salmon}
+}

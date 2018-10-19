@@ -3,4 +3,8 @@
 
 html, body {
   font-size: 62.5%; //10px
+  font-family: Helvetica, Arial, sans-serif;
 }
+
+@import './components/Header';
+@import './components/Page404';

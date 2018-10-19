@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import style from './style/app.scss';
 
+import Header from './components/commons/Header';
 import Home from './view/Home';
 import Page404 from './view/Page404';
 
@@ -12,9 +13,10 @@ ReactDOM.render((
     <Provider store={ store }>
         <Router history={browserHistory}>
             <React.Fragment>
+                <Header />
                 <Switch>
                     <Route exact path={'/'} component={Home} />
-                    <Route component={Page404} />
+                    <Route render={props => <Page404 {...props} />} />
                 </Switch>
             </React.Fragment>
         </Router>

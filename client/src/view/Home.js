@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { getHeaderTitle } from '../actions/headerActions';
 import { Container } from 'semantic-ui-react';
 
 class Home extends React.Component {
-    componentDidMount() {
-        console.log(this.props.profile);
+    componentWillMount() {
+        this.props.getHeaderTitle('Money Fraction');
     }
 
     render() {
@@ -29,9 +31,9 @@ class Home extends React.Component {
 
 };
 
-const mapStateToPropsFunc = state => ({
-    profile: state.profile
-});
+Home.propTypes = {
+    getHeaderTitle: PropTypes.func.isRequired
+};
 
 // export default withRouter(Home);
-export default connect(mapStateToPropsFunc)(Home);
+export default connect(null, { getHeaderTitle })(Home);

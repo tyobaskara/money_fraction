@@ -1,7 +1,5 @@
-// export const GET_ERRORS = 'GET_ERRORS';
-// export const CLEAR_ERRORS = 'CLEAR_ERRORS';
-// export const GET_PROFILES = 'GET_PROFILES';
-// export const LOADING_PROFILES = 'LOADING_PROFILES';
+export const GET_HEADER_TITLE = 'GET_HEADER_TITLE';
+export const REMOVE_HEADER_TITLE = 'REMOVE_HEADER_TITLE';
 
 
 // // Initial Redux Setup - step 4

@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import errorsReducer from './errorsReducer';
-import profilesReducer from './profilesReducer';
+import headerReducer from './headerReducer';
 
 export default combineReducers({
-    profile: profilesReducer,
-    errors: errorsReducer
+    header: headerReducer
 });
 
 // Initial Redux Setup - step 2

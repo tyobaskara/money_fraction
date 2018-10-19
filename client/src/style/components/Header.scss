@@ -1,0 +1,14 @@
+header {
+    background: tomato;
+}
+
+.nav {
+    box-shadow: 0px 2px 2px #ccc;
+    &-title {
+        text-align: center;
+        padding: 10px 0;
+        h1 {
+            color: #ffffff;
+        }
+    }
+}
