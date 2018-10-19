@@ -6,7 +6,7 @@ import {
 } from './types';
 
 // Get Header Title
-export const getHeaderTitle = payload => dispatch => {
+export const setHeaderTitle = payload => dispatch => {
   dispatch({
     type: GET_HEADER_TITLE,
     payload
