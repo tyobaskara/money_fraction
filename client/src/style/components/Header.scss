@@ -1,5 +1,9 @@
 header {
     background: lightseagreen;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
 }
 
 .nav {
@@ -11,4 +15,8 @@ header {
             color: #ffffff;
         }
     }
+}
+
+.has-header-fixed {
+    margin-top: 45px;
 }

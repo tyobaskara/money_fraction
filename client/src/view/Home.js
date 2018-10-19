@@ -17,14 +17,16 @@ class Home extends React.Component {
                     <title>Money Fraction</title>
                 </Helmet>
                 
-                <Container>
-                    <br />
-                    <h1>Hello React</h1>
-                    <hr style={{margin: '25px 0'}} />
-                    <div>
-                        <img src={require('../../static/images/no_pic.png')} alt="no pic"/>
-                    </div>
-                </Container>
+                <div className="has-header-fixed">
+                    <Container>
+                        <br />
+                        <h1>Hello React</h1>
+                        <hr style={{margin: '25px 0'}} />
+                        <div>
+                            <img src={require('../../static/images/no_pic.png')} alt="no pic"/>
+                        </div>
+                    </Container>
+                </div>
             </React.Fragment>
         );
     }
