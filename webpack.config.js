@@ -7,8 +7,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./client/src/index.html",
-  filename: "./index.html"
+  template: "./client/src/index.html"
 });
 
 module.exports = {
@@ -20,6 +19,8 @@ module.exports = {
     },
     devtool: "source-map",
     devServer: {
+      watchContentBase: true,
+      publicPath: "/",
       historyApiFallback: true,
       proxy: {
         '/api/*': {
