@@ -8,8 +8,8 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "start": "node ./server/server.js",
-    "server": "nodemon ./server/server.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "build": "webpack --mode production",
     "client": "webpack-dev-server --mode development --open --hot",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
