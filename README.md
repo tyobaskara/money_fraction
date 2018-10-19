@@ -1,4 +1,4 @@
-# boilerplate-react-fullstack
+# technology
 -- semantic-ui
 -- semantic-ui-react
 -- webpack 4
